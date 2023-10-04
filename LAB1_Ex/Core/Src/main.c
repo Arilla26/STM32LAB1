@@ -89,8 +89,58 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+  int hour = 0;
+  int min = 0;
+  int sec = 0;
+  int countS = 0;
+  clearAllClock();
   while (1)
   {
+	  if (countS >= 5)
+	  {
+		  countS = 0;
+		  if (hour != sec && min != sec)
+			  clearNumberOnClock(sec);
+		  sec++;
+	  }
+	  if (sec >= 12)
+	  {
+		  sec = 0;
+		  if (hour != min)
+			  clearNumberOnClock(min);
+		  min++;
+	  }
+	  if (min >= 12)
+	  {
+		  min = 0;
+		  clearNumberOnClock(hour);
+		  hour++;
+	  }
+	  if (hour >= 12)
+		  hour = 0;
+
+	  if (hour == min && hour == sec)
+		  setNumberOnClock(hour);
+	  if (hour == min && hour != sec)
+	  {
+		  setNumberOnClock(hour);
+		  setNumberOnClock(sec);
+	  }
+	  if (hour == sec && hour != min)
+	  {
+		  setNumberOnClock(hour);
+		  setNumberOnClock(min);
+	  }
+	  if (hour != sec && hour != min && sec != min)
+	  {
+		  setNumberOnClock(hour);
+		  setNumberOnClock(sec);
+		  setNumberOnClock(min);
+	  }
+
+	  countS++;
+	  HAL_Delay(1000);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
