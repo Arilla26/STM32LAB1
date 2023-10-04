@@ -53,6 +53,15 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+	//TODO EX1
+	HAL_GPIO_WritePin(RED_GPIO_Port, RED_Pin, RESET);
+	HAL_GPIO_WritePin(YELLOW_GPIO_Port, YELLOW_Pin, SET);
+	while (1)
+	{
+		HAL_Delay(2000);
+		HAL_GPIO_TogglePin(RED_GPIO_Port, RED_Pin);
+		HAL_GPIO_TogglePin(YELLOW_GPIO_Port, YELLOW_Pin);
+	}
 
 /* USER CODE END 0 */
 
