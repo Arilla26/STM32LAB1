@@ -84,6 +84,34 @@ int main(void)
 
   /* Initialize all configured peripherals */
   /* USER CODE BEGIN 2 */
+  //TODO EX8
+  void setNumberOnClock(int num)
+  {
+  	if (num == 0)
+  		HAL_GPIO_WritePin(_0_GPIO_Port, _0_Pin, RESET);
+  	if (num == 1)
+  		HAL_GPIO_WritePin(_1_GPIO_Port, _1_Pin, RESET);
+  	if (num == 2)
+  		HAL_GPIO_WritePin(_2_GPIO_Port, _2_Pin, RESET);
+  	if (num == 3)
+  		HAL_GPIO_WritePin(_3_GPIO_Port, _3_Pin, RESET);
+  	if (num == 4)
+  		HAL_GPIO_WritePin(_4_GPIO_Port, _4_Pin, RESET);
+  	if (num == 5)
+  		HAL_GPIO_WritePin(_5_GPIO_Port, _5_Pin, RESET);
+  	if (num == 6)
+  		HAL_GPIO_WritePin(_6_GPIO_Port, _6_Pin, RESET);
+  	if (num == 7)
+  		HAL_GPIO_WritePin(_7_GPIO_Port, _7_Pin, RESET);
+  	if (num == 8)
+  		HAL_GPIO_WritePin(_8_GPIO_Port, _8_Pin, RESET);
+  	if (num == 9)
+  		HAL_GPIO_WritePin(_9_GPIO_Port, _9_Pin, RESET);
+  	if (num == 10)
+  		HAL_GPIO_WritePin(_10_GPIO_Port, _10_Pin, RESET);
+  	if (num == 11)
+  		HAL_GPIO_WritePin(_11_GPIO_Port, _11_Pin, RESET);
+  }
 
   /* USER CODE END 2 */
 
