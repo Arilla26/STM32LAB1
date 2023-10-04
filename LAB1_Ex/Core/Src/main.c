@@ -84,6 +84,22 @@ int main(void)
 
   /* Initialize all configured peripherals */
   /* USER CODE BEGIN 2 */
+  //TODO EX7
+  void clearAllClock()
+  {
+  	HAL_GPIO_WritePin(_0_GPIO_Port, _0_Pin, SET);
+  	HAL_GPIO_WritePin(_1_GPIO_Port, _1_Pin, SET);
+  	HAL_GPIO_WritePin(_2_GPIO_Port, _2_Pin, SET);
+  	HAL_GPIO_WritePin(_3_GPIO_Port, _3_Pin, SET);
+  	HAL_GPIO_WritePin(_4_GPIO_Port, _4_Pin, SET);
+  	HAL_GPIO_WritePin(_5_GPIO_Port, _5_Pin, SET);
+  	HAL_GPIO_WritePin(_6_GPIO_Port, _6_Pin, SET);
+  	HAL_GPIO_WritePin(_7_GPIO_Port, _7_Pin, SET);
+  	HAL_GPIO_WritePin(_8_GPIO_Port, _8_Pin, SET);
+  	HAL_GPIO_WritePin(_9_GPIO_Port, _9_Pin, SET);
+  	HAL_GPIO_WritePin(_10_GPIO_Port, _10_Pin, SET);
+  	HAL_GPIO_WritePin(_11_GPIO_Port, _11_Pin, SET);
+  }
 
   /* USER CODE END 2 */
 
